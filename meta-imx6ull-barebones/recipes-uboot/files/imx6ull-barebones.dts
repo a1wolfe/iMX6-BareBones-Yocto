@@ -185,7 +185,7 @@
 &qspi {
 	flash0: flash@0 {
 		compatible = "jedec,spi-nor";
-		spi-max-frequency = <50000000>;
+		spi-max-frequency = <29000000>;
 	};
 };
 
@@ -233,7 +233,7 @@
 //};
 
 &usdhc2 {
-	pinctrl-0 = <&pinctrl_usdhc2_8bit>;
+	status = "disabled";
 };
 
 // Copied from imx6ul-14x14-evk.dtsi, unchanged groups are commented out - a1wolfe, May/1/26
