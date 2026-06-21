@@ -219,7 +219,7 @@
 
 &usdhc1 {
 	broken-cd;
-	
+	no-1-8-v;
 	/delete-property/ cd-gpios;
 };
 
