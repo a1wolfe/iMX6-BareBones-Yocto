@@ -183,6 +183,8 @@
 //};
 
 &qspi {
+	vcc-supply = <&reg_peri_3v3>;
+
 	flash0: flash@0 {
 		compatible = "jedec,spi-nor";
 		spi-max-frequency = <29000000>;
