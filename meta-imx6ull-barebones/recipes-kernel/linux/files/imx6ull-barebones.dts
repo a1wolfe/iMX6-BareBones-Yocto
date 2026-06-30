@@ -183,9 +183,10 @@
 //};
 
 &qspi {
+
 	flash0: flash@0 {
 		compatible = "jedec,spi-nor";
-		spi-max-frequency = <50000000>;
+		vcc-supply = <&reg_peri_3v3>;
 	};
 };
 
@@ -219,7 +220,7 @@
 
 &usdhc1 {
 	broken-cd;
-	
+	no-1-8-v;
 	/delete-property/ cd-gpios;
 };
 
@@ -233,7 +234,7 @@
 //};
 
 &usdhc2 {
-	pinctrl-0 = <&pinctrl_usdhc2_8bit>;
+	status = "disabled";
 };
 
 // Copied from imx6ul-14x14-evk.dtsi, unchanged groups are commented out - a1wolfe, May/1/26
